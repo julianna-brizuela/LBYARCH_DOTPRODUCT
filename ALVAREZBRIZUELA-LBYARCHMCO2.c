@@ -21,8 +21,8 @@ void initialize_arrays(float * a, float * b, int n) {
 	srand(time(NULL)); 
 	
 	for (i = 0; i < n; i++) {
-		a[i] = ((float)rand()/(float)(RAND_MAX))*0.5;
-		b[i] = ((float)rand()/(float)(RAND_MAX))*0.5;
+		a[i] = ((float)rand() / (float)RAND_MAX) * 100.0f;
+        b[i] = ((float)rand() / (float)RAND_MAX) * 100.0f;
 	}
 }
 
@@ -42,7 +42,7 @@ int main() {
 	// program output
 	float sdot;
 	
-	printf("What vector size would you like to process?\n[1] 2^20\n[2] 2^24\n[3] 2^30?\nInput: ");
+	printf("What vector size would you like to process?\n[1] 2^20\n[2] 2^24\n[3] 2^28?\nInput: ");
 	scanf("%d", &input);
 	
 	switch(input) {
@@ -55,21 +55,22 @@ int main() {
 			input = 0;
 			break;
 		case 3:
-			vector_size = 1073741824;
+			// 2 ^ 28
+			vector_size = 268435456;
 			input = 0;
 			break;
 		default:
 			break;
 	}
-	
-	
+
 	a=(float*)malloc(vector_size*sizeof(float));
 	b=(float*)malloc(vector_size*sizeof(float));
 	initialize_arrays(a, b, vector_size);
+
 	
 	if(a && b) {
 		printf("Memory successfully allocated!\n");
-		int i = 0;
+
 	} else {
 		printf("Memory unsuccessfully allocated!\n");
 	}
