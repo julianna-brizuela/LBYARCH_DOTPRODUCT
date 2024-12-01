@@ -94,7 +94,7 @@ int main() {
 				double avgTimeASM = 0.0;
 				
 				initialize_arrays(a, b, vector_size);
-				printf("C KERNEL sdot is: ");
+				printf("\nC KERNEL sdot is: ");
 			
 				// 20 ITERATIONS OF C KERNEL
 				for (count = 0; count < 20; count++) {
@@ -112,7 +112,7 @@ int main() {
 				printf("C KERNEL: Total time taken to compute for the dot product is: %f\n", totalTimeC);
 				printf("\n--------------------\n");
 				
-				printf("ASM KERNEL sdot is: ");
+				printf("\nASM KERNEL sdot is: ");
 				
 				// 20 ITERATIONS OF ASM KERNEL
 				for (count = 0; count < 20; count++) {
