@@ -25,11 +25,14 @@ In order to compare the runtime speed between the C kernel and the ASM kernel, e
 For a vector size of 2^20, the x86-64 kernel performed significantly faster than the C kernel, with a difference of 0.00285. The x86-64 kernel ran slightly faster when executed in Release mode, whereas the C kernel had no significant change in execution time.
 ![image](https://github.com/user-attachments/assets/1f60ffa4-3615-43f2-9533-7bebfa4d2d6c)
 
+
 For a vector size of 2^24, the ASM kernel also performed faster than the C kernel, with a difference of 0.03975. Here, both kernels run faster in Debug mode.
 ![image](https://github.com/user-attachments/assets/d5342d3e-4b5f-4c2c-bb39-697ee7de011e)
 
+
 Lastly, with a vector size of 2^28, the ASM kernel performed faster than the C kernel, with a difference of 0.648. In terms of the modes, both kernels performed slightly better when executed in Release mode.
 ![image](https://github.com/user-attachments/assets/eb7ef85e-bac9-40f3-a5a0-2b859c33e233)
+
 
 From these tests, it can be deduced that the ASM kernel has an ultimately higher performance speed than the C kernel, even as the vector size increases. It can also be said that the Release mode yields faster execution times, since it provides optimized performance.
 
