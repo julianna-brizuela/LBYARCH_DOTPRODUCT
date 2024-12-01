@@ -1,9 +1,9 @@
 section .text
 bits 64
 default rel
-global dot_prod
+global dotProd
 
-dot_prod:
+dotProd:
     xorps xmm5, xmm5
     xor rsi, rsi
 
